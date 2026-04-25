@@ -1,0 +1,5 @@
+com.studentnet.postmanager
+com.studentnet.postmanager.controller
+com.studentnet.postmanager.dao
+com.studentnet.postmanager.model
+com.studentnet.postmanager.util

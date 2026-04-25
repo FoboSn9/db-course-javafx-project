@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="15" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.studentnet.postmanager.controller.PostController">
+    <padding>
+        <Insets top="15" right="15" bottom="15" left="15"/>
+    </padding>
+
+    <HBox spacing="10" alignment="CENTER_LEFT">
+        <Label text="Пошук:"/>
+        <TextField fx:id="searchAuthorIdField" promptText="ID Автора" prefWidth="100"/>
+        <TextField fx:id="searchKeywordField" promptText="Ключове слово" prefWidth="200"/>
+        <Button text="Знайти" onAction="#handleSearch" style="-fx-background-color: #2196F3; -fx-text-fill: white;"/>
+        <Button text="Скинути" onAction="#loadPosts" />
+    </HBox>
+
+    <TableView fx:id="postTable" VBox.vgrow="ALWAYS" prefHeight="350">
+        <columns>
+            <TableColumn fx:id="idCol" text="ID" prefWidth="40"/>
+            <TableColumn fx:id="authorCol" text="ID Автора" prefWidth="80"/>
+            <TableColumn fx:id="wallCol" text="ID Стіни" prefWidth="80"/>
+            <TableColumn fx:id="contentCol" text="Текст допису" prefWidth="300"/>
+            <TableColumn fx:id="likesCol" text="Лайки" prefWidth="60"/>
+            <TableColumn fx:id="dateCol" text="Дата створення" prefWidth="150"/>
+        </columns>
+    </TableView>
+
+    <VBox spacing="10" style="-fx-border-color: #ccc; -fx-border-width: 1; -fx-padding: 10;">
+        <Label text="Керування дописом" style="-fx-font-weight: bold;"/>
+        <HBox spacing="10">
+            <TextField fx:id="authorIdField" promptText="ID Автора" prefWidth="100"/>
+            <TextField fx:id="wallOwnerIdField" promptText="ID Стіни" prefWidth="100"/>
+            <TextField fx:id="contentField" promptText="Напишіть текст допису..." HBox.hgrow="ALWAYS"/>
+        </HBox>
+        <HBox spacing="10">
+            <Button text="Додати новий" onAction="#handleAdd" style="-fx-background-color: #4CAF50; -fx-text-fill: white;"/>
+            <Button text="Зберегти зміни" onAction="#handleUpdate" style="-fx-background-color: #FF9800; -fx-text-fill: white;"/>
+            <Button text="Видалити" onAction="#handleDelete" style="-fx-background-color: #F44336; -fx-text-fill: white;"/>
+            <Button text="Очистити форму" onAction="#clearForm" />
+        </HBox>
+    </VBox>
+</VBox>

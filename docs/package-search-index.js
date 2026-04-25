@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"com.studentnet.postmanager"},{"l":"com.studentnet.postmanager.controller"},{"l":"com.studentnet.postmanager.dao"},{"l":"com.studentnet.postmanager.model"},{"l":"com.studentnet.postmanager.util"}];updateSearchResults();
